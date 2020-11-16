@@ -186,11 +186,9 @@ class FastHan(object):
         #首先检查本地目录中是否已缓存模型，若没有缓存则下载。
 
         if model_type=='base':
-            url='http://212.129.155.247/fasthan/fasthan_base.zip'
-        elif model_type=='large':
-            url='http://212.129.155.247/fasthan/fasthan_large.zip'
+            url='http://d1qbdbol06y129.cloudfront.net/fasthan_base.zip'
         else:
-            raise ValueError("model_type can only be base or large.")
+            raise ValueError("model_type can only be base.")
         
         model_dir=cached_path(url,name='fasthan')
         return model_dir
